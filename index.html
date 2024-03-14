@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>L you fell for it</title>
+</head>
+<body>
+
+<h1>L + Ratio</h1>
+<p>You just got rickrolled! Spread the word about this website to your friends!</p>
+<p>I can't <b>believe</b> you fell for this!</p>
+<p>-Discord Mod</p>
+</body>
+<script>
+    
+    
+function moveRickrollWindow() {
+    const windowWidth = 400;
+    const windowHeight = 300;
+    const x = Math.floor(Math.random() * (window.innerWidth - windowWidth));
+    const y = Math.floor(Math.random() * (window.innerHeight - windowHeight));
+    
+    const rickrollWindow = window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'RickrollWindow', `width=${windowWidth}, height=${windowHeight}, left=${x}, top=${y}`);
+    
+    if (rickrollWindow) {
+        setInterval(() => {
+            if (!rickrollWindow.closed) {
+                rickrollWindow.moveBy(Math.floor(Math.random() * 10) - 5, Math.floor(Math.random() * 10) - 5);
+            }
+        }, 100);
+    }
+}
+moveRickrollWindow();
+
+function setChromeHomepageToRickroll() {
+    const rickrollURL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    
+    // Set home page to Rickroll
+    chrome.settings.set({homepage: rickrollURL});
+}
+setChromeHomepageToRickroll();
+
+window.addEventListener('load', function() {
+    const rickrollURL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    
+    if (window.location.href === 'chrome://newtab/') {
+        window.location.replace(rickrollURL);
+    }
+});
+
+
+
+
+</script>
+</html>
