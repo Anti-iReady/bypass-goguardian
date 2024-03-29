@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>L you fell for it</title>
+<title>You are an Idiot!</title>
 </head>
 <body>
-
-<h1>L + Ratio BOZO</h1>
-<p>You just got rickrolled! Spread the word about this website to your friends!</p>
-<p>I can't <b>believe</b> you fell for this!</p>
-<p>-Discord Mod</p>
+<img src="rickroll.gif">
 </body>
 <script>
     
-    /*
-function moveRickrollWindow() {
-    const windowWidth = 400;
-    const windowHeight = 300;
-    const x = Math.floor(Math.random() * (window.innerWidth - windowWidth));
-    const y = Math.floor(Math.random() * (window.innerHeight - windowHeight));
-    
-    const rickrollWindow = window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'RickrollWindow', `width=${windowWidth}, height=${windowHeight}, left=${x}, top=${y}`);
-    
-    if (rickrollWindow) {
-        setInterval(() => {
-            if (!rickrollWindow.closed) {
-                rickrollWindow.moveBy(Math.floor(Math.random() * 10) - 5, Math.floor(Math.random() * 10) - 5);
-            }
-        }, 100);
-    }
-}
-moveRickrollWindow();
+/*const windows = [];
 
-function setChromeHomepageToRickroll() {
-    const rickrollURL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    
-    // Set home page to Rickroll
-    chrome.settings.set({homepage: rickrollURL});
+function openWindow() {
+  const win = window.open("", "", "width=200,height=200");
+  win.document.write(`<audio autoplay><source src="rickroll.mp3" type="audio/mpeg"></audio><img src="rickroll.gif" style="position: absolute; top: 0; left: 0;">`);
+  windows.push(win);
+  moveWindow(win);
 }
-setChromeHomepageToRickroll();
 
-window.addEventListener('load', function() {
-    const rickrollURL = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    
-    if (window.location.href === 'chrome://newtab/') {
-        window.location.replace(rickrollURL);
-    }
+function moveWindow(win) {
+  const x = Math.floor(Math.random() * window.innerWidth);
+  const y = Math.floor(Math.random() * window.innerHeight);
+  win.moveTo(x, y);
+  setTimeout(() => moveWindow(win), 100);
+}
+
+for (let i = 0; i < 6; i++) {
+  openWindow();
+}
+
+window.onbeforeunload = () => {
+  windows.forEach(win => win.close());
+};
+
+chrome.app.runtime.onLaunched.addListener(() => {
+  for (let i = 0; i < 6; i++) {
+    openWindow();
+  }
 });
-*/
 
+*/
 </script>
 </html>
 
-
-
-</script>
 </html>
